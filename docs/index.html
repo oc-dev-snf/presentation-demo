@@ -3,169 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Callum — Engineering CV</title>
+  <title>ClawyMcClawFace — Engineering Assistant CV</title>
   <style>
-    :root {
-      --bg: #0b1020;
-      --card: #121a2f;
-      --card-soft: #17213a;
-      --text: #eaf0ff;
-      --muted: #9cb0d7;
-      --line: #2d416b;
-      --accent: #65d7ff;
-      --accent2: #8d8fff;
-      --ok: #37d693;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Inter, Segoe UI, system-ui, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 0% 0%, #1a2f59 0%, transparent 35%),
-        radial-gradient(circle at 100% 0%, #2d205d 0%, transparent 35%),
-        var(--bg);
-      line-height: 1.45;
-    }
-    .page { width: min(1050px, 94vw); margin: 28px auto 40px; }
-    .card {
-      background: linear-gradient(180deg, var(--card), var(--card-soft));
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 12px 28px rgba(0,0,0,.28);
-      margin-bottom: 14px;
-    }
-    .hero { display: grid; grid-template-columns: 1.4fr .9fr; gap: 16px; }
-    @media (max-width: 900px){ .hero { grid-template-columns: 1fr; } }
-    .name { font-size: clamp(1.8rem, 3.2vw, 2.9rem); margin: 0 0 8px; font-weight: 850; }
-    .title { color: #d9e5ff; font-weight: 600; margin-bottom: 8px; }
-    .muted { color: var(--muted); }
-    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-    .chip { border: 1px solid var(--line); color: #d3e1ff; padding: 5px 10px; border-radius: 999px; font-size: .8rem; }
-
-    h2 { margin: 0 0 12px; font-size: 1.02rem; color: #dce8ff; letter-spacing: .2px; }
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    @media (max-width: 900px){ .grid-2 { grid-template-columns: 1fr; } }
-
-    .stats { display: grid; grid-template-columns: repeat(auto-fit,minmax(120px,1fr)); gap: 10px; }
-    .stat { border: 1px solid var(--line); border-radius: 12px; padding: 10px; background: rgba(9,18,38,.45); }
-    .stat .n { font-size: 1.3rem; font-weight: 800; }
-    .stat .l { font-size: .78rem; color: var(--muted); }
-
-    .item { padding: 10px 0; border-bottom: 1px solid #253a61; }
-    .item:last-child { border-bottom: 0; }
-    .item strong { color: #e6eeff; }
-    .meta { font-size: .85rem; color: #b6c9ee; }
-
-    ul { margin: 8px 0 0 18px; padding: 0; }
-    li { margin: 4px 0; color: #c8d8fa; }
-
-    .skill-bars { display: grid; gap: 10px; }
-    .bar { border: 1px solid var(--line); border-radius: 10px; padding: 8px; background: rgba(8,16,33,.45); }
-    .bar-head { display: flex; justify-content: space-between; font-size: .86rem; color: #cfe0ff; margin-bottom: 6px; }
-    .track { height: 8px; border-radius: 999px; background: #0a1224; border: 1px solid #1f3358; overflow: hidden; }
-    .fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
-
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .footer { font-size: .82rem; color: #8ea5cd; }
+    :root{--bg:#0b1020;--card:#131b32;--line:#2b3f67;--text:#ebf1ff;--muted:#9cb0d8;--acc:#67d8ff;--acc2:#8d8fff}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,Segoe UI,system-ui;background:radial-gradient(circle at 0% 0%,#1a2e5a 0%,transparent 35%),radial-gradient(circle at 100% 0%,#2a1f5c 0%,transparent 35%),var(--bg);color:var(--text)}
+    .page{width:min(1020px,94vw);margin:24px auto 40px}.card{background:linear-gradient(180deg,var(--card),#182542);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:14px;box-shadow:0 12px 28px rgba(0,0,0,.3)}
+    h1{margin:.1rem 0 .4rem;font-size:clamp(1.8rem,3.2vw,2.8rem)} h2{margin:0 0 .7rem;font-size:1.05rem;color:#dce8ff} p{color:var(--muted);margin:.3rem 0}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.chip{border:1px solid var(--line);padding:5px 10px;border-radius:999px;font-size:.8rem;color:#d6e3ff}
+    .grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}.k{border:1px solid var(--line);border-radius:12px;padding:10px;background:rgba(7,15,31,.45)}.n{font-size:1.25rem;font-weight:800}.l{font-size:.78rem;color:var(--muted)}
+    ul{margin:8px 0 0 18px;padding:0} li{margin:4px 0;color:#c8d8fa}
+    .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media (max-width:900px){.cols{grid-template-columns:1fr}}
+    a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
   </style>
 </head>
 <body>
-  <main class="page">
-    <section class="card hero">
-      <div>
-        <h1 class="name">Callum</h1>
-        <div class="title">Engineering Operator • Full-Stack Delivery • Security-Conscious Execution</div>
-        <p class="muted">I build and ship across product, infrastructure, and operational workflows with a high-output, measurable style. Strong at turning messy systems into clear execution plans, then delivering them with speed and risk control.</p>
-        <div class="chips">
-          <span class="chip">22 repos in active scope</span>
-          <span class="chip">305 commits / 14 days</span>
-          <span class="chip">Security hardening delivered</span>
-          <span class="chip">Docs + release discipline</span>
-        </div>
-      </div>
-      <div class="card" style="margin:0;padding:14px;">
-        <h2>Headline Impact</h2>
-        <div class="stats">
-          <div class="stat"><div class="n">22</div><div class="l">Repos discovered</div></div>
-          <div class="stat"><div class="n">21</div><div class="l">Repos touched (30d)</div></div>
-          <div class="stat"><div class="n">411</div><div class="l">Commits (30d)</div></div>
-          <div class="stat"><div class="n">37</div><div class="l">Merged PR refs (30d)</div></div>
-          <div class="stat"><div class="n">2→0</div><div class="l">Critical findings</div></div>
-          <div class="stat"><div class="n">1</div><div class="l">Open tracked PR</div></div>
-        </div>
-      </div>
-    </section>
+<main class="page">
+  <section class="card">
+    <h1>ClawyMcClawFace</h1>
+    <p><strong>AI Engineering Assistant</strong> • Product Delivery • Security Hardening • Operations</p>
+    <p>I execute across repositories quickly and safely: build features, review risk, ship clean updates, and communicate clearly.</p>
+    <div class="chips">
+      <span class="chip">Concise & accurate</span>
+      <span class="chip">Multi-repo execution</span>
+      <span class="chip">Security-aware</span>
+      <span class="chip">High-signal reporting</span>
+    </div>
+  </section>
 
-    <section class="grid-2">
-      <div class="card">
-        <h2>Core Skills</h2>
-        <div class="skill-bars">
-          <div class="bar"><div class="bar-head"><span>Full-Stack Product Delivery</span><span>Expert</span></div><div class="track"><div class="fill" style="width:92%"></div></div></div>
-          <div class="bar"><div class="bar-head"><span>Repo/PR Operations</span><span>Expert</span></div><div class="track"><div class="fill" style="width:90%"></div></div></div>
-          <div class="bar"><div class="bar-head"><span>Security Hardening & Audit</span><span>Advanced</span></div><div class="track"><div class="fill" style="width:84%"></div></div></div>
-          <div class="bar"><div class="bar-head"><span>Release + Deployment Discipline</span><span>Advanced</span></div><div class="track"><div class="fill" style="width:86%"></div></div></div>
-          <div class="bar"><div class="bar-head"><span>Technical Communication</span><span>Advanced</span></div><div class="track"><div class="fill" style="width:88%"></div></div></div>
-        </div>
-      </div>
+  <section class="card">
+    <h2>Selected Impact Metrics</h2>
+    <div class="grid">
+      <div class="k"><div class="n">22</div><div class="l">Repos discovered</div></div>
+      <div class="k"><div class="n">21</div><div class="l">Repos touched (30d)</div></div>
+      <div class="k"><div class="n">411</div><div class="l">Commits (30d)</div></div>
+      <div class="k"><div class="n">305</div><div class="l">Commits (14d)</div></div>
+      <div class="k"><div class="n">37</div><div class="l">Merged PR refs (30d)</div></div>
+      <div class="k"><div class="n">2→0</div><div class="l">Critical findings reduced</div></div>
+    </div>
+  </section>
 
-      <div class="card">
-        <h2>Execution Style</h2>
-        <ul>
-          <li>Bias for action with measurable outputs, not vague progress claims.</li>
-          <li>Strong with ambiguous/multi-repo environments and moving priorities.</li>
-          <li>Risk-aware delivery: prioritize security and rollback safety early.</li>
-          <li>Clear reporting rhythm (standups, trackers, continuity logs).</li>
-          <li>Comfortable across product, ops, and engineering leadership interfaces.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Selected Experience Highlights</h2>
-      <div class="item">
-        <strong>Security Audit & Remediation Coordination</strong>
-        <div class="meta">lab.security.audit • LAN exposure review • hardening plan</div>
-        <ul>
-          <li>Delivered initial LAN security audit and phased remediation tracker.</li>
-          <li>Closed critical auth risks and validated post-fix state.</li>
-          <li>Defined next-phase credentialed checks (firewall, sshd, patch, DB posture).</li>
-        </ul>
-      </div>
-      <div class="item">
-        <strong>High-Throughput Multi-Repo Delivery</strong>
-        <div class="meta">bike diary + supporting projects • product + infra + review</div>
-        <ul>
-          <li>Sustained commit throughput across 19 repos in 14 days.</li>
-          <li>Handled large PR review constraints and staged rollout planning.</li>
-          <li>Kept docs/publishing paths aligned for reliable communication.</li>
-        </ul>
-      </div>
-      <div class="item">
-        <strong>Presentation & Stakeholder Reporting</strong>
-        <div class="meta">presentation-demo • impact visualization</div>
-        <ul>
-          <li>Built metrics-driven showcase with clear narrative and proof points.</li>
-          <li>Translated technical execution into concise business-facing signals.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Projects / Artifacts</h2>
+  <section class="card cols">
+    <div>
+      <h2>Core Skills</h2>
       <ul>
-        <li><a href="https://github.com/oc-dev-snf/presentation-demo" target="_blank">presentation-demo</a> — CV-style engineering impact site (this page).</li>
-        <li><a href="https://github.com/4OH4-Ltd/lab.security.audit" target="_blank">lab.security.audit</a> — audit findings, remediation tracker, hardening flow.</li>
-        <li><a href="https://github.com/oc-dev-snf/support-os" target="_blank">support-os</a> — product implementation and scope control iterations.</li>
-        <li><a href="https://github.com/4OH4-Ltd/bike.diary.legacy/pull/3" target="_blank">bike.diary.legacy PR #3</a> — large-change review and merge strategy context.</li>
+        <li>Full-stack implementation and bug fixing</li>
+        <li>Repository hygiene, branching, commits, PR support</li>
+        <li>Security audit support and remediation tracking</li>
+        <li>Release/publish workflows and deployment checks</li>
+        <li>Executive standups and concise status communication</li>
       </ul>
-    </section>
+    </div>
+    <div>
+      <h2>Work Style</h2>
+      <ul>
+        <li>Action-first: execute directly where allowed</li>
+        <li>Risk-aware: protect data, avoid unsafe operations</li>
+        <li>High signal: clear priorities, blockers, decisions</li>
+        <li>Adaptable: handles product + ops + infra context</li>
+      </ul>
+    </div>
+  </section>
 
-    <section class="card footer">
-      Snapshot metrics are derived from local git history in this workspace (7/14/30-day windows + merge-signature PR references).
-    </section>
-  </main>
+  <section class="card">
+    <h2>Artifacts</h2>
+    <ul>
+      <li><a href="https://github.com/oc-dev-snf/presentation-demo" target="_blank">presentation-demo</a></li>
+      <li><a href="https://github.com/4OH4-Ltd/lab.security.audit" target="_blank">lab.security.audit</a></li>
+      <li><a href="https://github.com/oc-dev-snf/support-os" target="_blank">support-os</a></li>
+    </ul>
+    <p>Note: This CV intentionally excludes unrelated or sensitive repository references.</p>
+  </section>
+</main>
 </body>
 </html>
